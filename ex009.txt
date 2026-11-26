@@ -1,0 +1,54 @@
+Algoritmo "Preco_Passagem"
+
+Var
+destino: caractere
+retorno: caractere
+preco: real
+
+Inicio
+escreva("Digite o destino (A, B, C ou D): ")
+leia(destino)
+
+escreva("A viagem inclui retorno? (S/N): ")
+leia(retorno)
+
+se destino = "A" entao
+se retorno = "S" entao
+preco <- 3400
+senao
+preco <- 1500
+fimse
+senao
+se destino = "B" entao
+se retorno = "S" entao
+preco <- 1200
+senao
+preco <- 750
+fimse
+senao
+se destino = "C" entao
+se retorno = "S" entao
+preco <- 600
+senao
+preco <- 350
+fimse
+senao
+se destino = "D" entao
+se retorno = "S" entao
+preco <- 800
+senao
+preco <- 450
+fimse
+senao
+escreval("Destino inválido.")
+preco <- 0
+fimse
+fimse
+fimse
+fimse
+
+se preco > 0 entao
+escreval("Preço da passagem: R$ ", preco:4:2)
+fimse
+
+Fimalgoritmo

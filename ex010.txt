@@ -1,0 +1,35 @@
+Algoritmo "Emprestimo"
+
+Var
+salario, valorEmprestimo, parcelas: real
+taxaLiberacao, juros, valorTotal, valorParcela, limiteParcela: real
+
+Inicio
+escreva("Digite o valor do salário: R$ ")
+leia(salario)
+
+escreva("Digite o valor do empréstimo desejado: R$ ")
+leia(valorEmprestimo)
+
+escreva("Digite a quantidade de parcelas: ")
+leia(parcelas)
+
+taxaLiberacao <- valorEmprestimo * 0.02
+juros <- valorEmprestimo * 0.01 * parcelas
+valorTotal <- valorEmprestimo + taxaLiberacao + juros
+valorParcela <- valorTotal / parcelas
+limiteParcela <- salario * 0.20
+
+escreval("Taxa de liberação: R$ ", taxaLiberacao:4:2)
+escreval("Valor dos juros: R$ ", juros:4:2)
+escreval("Valor total do empréstimo: R$ ", valorTotal:4:2)
+escreval("Valor da parcela: R$ ", valorParcela:4:2)
+escreval("Limite de 20% do salário: R$ ", limiteParcela:4:2)
+
+se valorParcela <= limiteParcela entao
+escreval("EMPRÉSTIMO APROVADO")
+senao
+escreval("EMPRÉSTIMO NÃO APROVADO")
+fimse
+
+Fimalgoritmo
